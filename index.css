@@ -1,0 +1,69 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family: Inter, system-ui, -apple-system, sans-serif; }
+body { background:#f8fafc; color:#0f172a; line-height:1.6; }
+
+/* NAV */
+nav { background:white; border-bottom:1px solid #e2e8f0; position:sticky; top:0; z-index:10; }
+.nav-inner { max-width:1200px; margin:0 auto; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; }
+.logo { display:flex; gap:12px; align-items:center; }
+.logo-box { width:40px; height:40px; background:#16a34a; color:white; display:grid; place-items:center; font-weight:800; border-radius:8px; }
+.logo b { display:block; font-size:14px; line-height:1.1; }
+.logo small { font-size:11px; color:#64748b; }
+.nav-links { display:flex; gap:18px; align-items:center; }
+.nav-links a { text-decoration:none; color:#334155; font-size:13px; font-weight:600; }
+.btn-nav { border:1px solid #e2e8f0; padding:8px 16px; border-radius:20px; }
+.btn-primary { background:#16a34a; color:white!important; padding:10px 18px; border-radius:20px; border:none; cursor:pointer; font-weight:700; }
+.btn-primary.large { padding:14px 24px; border-radius:28px; font-size:14px; }
+.btn-outline.large { padding:14px 24px; border-radius:28px; border:1px solid #cbd5e1; background:white; font-weight:700; cursor:pointer; }
+
+/* HERO */
+.hero { max-width:1200px; margin:0 auto; padding:40px 20px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center; }
+.badge { background:#dcfce7; color:#166534; padding:6px 12px; border-radius:20px; font-size:11px; font-weight:700; display:inline-block; margin-bottom:16px; letter-spacing:0.5px; }
+.hero-left h1 { font-size:42px; line-height:1.1; font-weight:900; letter-spacing:-1px; margin-bottom:16px; }
+.hero-left p { color:#475569; font-size:15px; margin-bottom:20px; max-width:520px; }
+.hero-btns { display:flex; gap:12px; margin-bottom:14px; }
+.trust { color:#94a3b8; font-size:11px; }
+.hero-right { position:relative; }
+.hero-right img { width:100%; border-radius:24px; height:420px; object-fit:cover; }
+.float-card { position:absolute; bottom:20px; left:-20px; background:white; padding:14px 18px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.15); display:flex; gap:10px; align-items:center; }
+.float-card b { font-size:20px; color:#16a34a; }
+.float-card span { font-size:12px; font-weight:600; }
+.float-card.two { top:20px; bottom:auto; right:-10px; left:auto; }
+
+/* STATS */
+.stats { background:#0f172a; color:white; display:grid; grid-template-columns:repeat(4,1fr); padding:28px 20px; max-width:1200px; margin:0 auto; border-radius:16px; text-align:center; }
+.stats h2 { font-size:28px; color:#22c55e; }
+.stats p { font-size:11px; letter-spacing:1px; opacity:0.7; margin-top:4px; }
+
+/* SECTIONS */
+.section { max-width:1200px; margin:60px auto; padding:0 20px; }
+.section-head { text-align:center; margin-bottom:32px; }
+.section-head h2 { font-size:28px; font-weight:800; }
+.section-head p { color:#64748b; font-size:14px; margin-top:8px; }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.card { background:white; border:1px solid #e2e8f0; border-radius:16px; padding:20px; }
+.card .icon { font-size:28px; margin-bottom:12px; }
+.card h3 { font-size:15px; margin-bottom:6px; }
+.card p { font-size:13px; color:#64748b; }
+
+/* HOW */
+.how { background:white; padding:60px 20px; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; }
+.how .section-head { max-width:1200px; margin:0 auto 32px; }
+.steps { max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.step span { width:32px; height:32px; background:#16a34a; color:white; display:grid; place-items:center; border-radius:50%; font-weight:800; font-size:13px; margin-bottom:12px; }
+.step h4 { font-size:15px; margin-bottom:6px; }
+.step p { font-size:13px; color:#64748b; }
+
+/* FOOTER */
+footer { text-align:center; padding:30px 20px; color:#94a3b8; font-size:12px; }
+footer a { color:#64748b; text-decoration:none; margin:0 6px; }
+
+/* MOBILE */
+@media(max-width:900px){
+  .hero { grid-template-columns:1fr; }
+  .hero-left h1 { font-size:32px; }
+  .grid, .steps, .stats { grid-template-columns:1fr; gap:12px; }
+  .nav-links a:not(.btn-primary) { display:none; }
+  .hero-right img { height:300px; }
+  .float-card { left:10px; bottom:10px; }
+  .float-card.two { right:10px; top:10px; }
+}
